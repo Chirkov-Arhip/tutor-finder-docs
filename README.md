@@ -1,2 +1,2 @@
-# tutor-finder-docs
-Диаграммы и документация проекта TutorFinder
+п»ї# tutor-finder-docs
+Diagrams and documentation for TutorFinder project
