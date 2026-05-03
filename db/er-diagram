@@ -1,0 +1,63 @@
+## ER-диаграмма базы данных
+
+```mermaid
+erDiagram
+    users {
+        integer id PK
+        string email
+        string password_hash
+        string role
+        datetime created_at
+    }
+
+    student_profiles {
+        integer id PK
+        integer user_id FK
+        string last_name
+        string first_name
+        string middle_name
+        integer age
+        string phone
+        text about
+    }
+
+    tutor_profiles {
+        integer id PK
+        integer user_id FK
+        string last_name
+        string first_name
+        string middle_name
+        integer age
+        integer experience
+        string phone
+        text about
+    }
+
+    subjects {
+        integer id PK
+        string name
+    }
+
+    tutor_subjects {
+        integer tutor_id FK
+        integer subject_id FK
+    }
+
+    applications {
+        integer id PK
+        integer student_id FK
+        integer tutor_id FK
+        integer subject_id FK
+        string custom_subject
+        string status
+        datetime created_at
+    }
+
+    users ||--o| student_profiles : "имеет"
+    users ||--o| tutor_profiles : "имеет"
+    tutor_profiles ||--o{ tutor_subjects : "преподаёт"
+    subjects ||--o{ tutor_subjects : "преподаётся"
+    student_profiles ||--o{ applications : "отправляет"
+    tutor_profiles ||--o{ applications : "получает"
+    subjects ||--o{ applications : "указывается в"
+```
