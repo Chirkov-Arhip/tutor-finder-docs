@@ -18,8 +18,6 @@ TutorFinder — web-приложение, ориентированное на ш
 - Клиентская часть - web-приложение на HTML + JavaScript.
 - Серверная часть - REST API, написанное на Python с использованием FastAPI, репозиторий [tutor-finder](https://github.com/Chirkov-Arhip/tutor-finder).
 
-Для разработки диаграмм можно использовать библиотеку [mermaid](https://mermaid.js.org/) и [онлайн-редактор диаграмм](https://mermaid.live/edit).
-
 Для работы с диаграммами в VS Code рекомендуется установить расширения:
 - Markdown Preview Mermaid Support
 - Code Spell Checker
